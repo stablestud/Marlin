@@ -215,6 +215,9 @@ typedef struct { raw_adc_t value; celsius_t celsius; } temp_entry_t;
 #if ANY_THERMISTOR_IS(1047)   // Pt1000 with 4k7 pullup
   #include "thermistor_1047.h"
 #endif
+#if ANY_THERMISTOR_IS(1420)   // Pt1000 with 4k7 pullup but correct my sensor offset (approx. 5%)
+  #include "thermistor_1420.h"
+#endif
 #if ANY_THERMISTOR_IS(20)     // Pt100 with INA826 amp on Ultimaker v2.0 electronics
   #include "thermistor_20.h"
 #endif
